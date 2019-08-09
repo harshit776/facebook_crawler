@@ -122,13 +122,10 @@ def my_friends(driver):
 
 
 def login():
-<<<<<<< HEAD
 	email = ""
 	password = ""
-=======
 	email = "facebook_id"
 	password = "facebook_password"
->>>>>>> Download images of friends!
 
 	chrome_options = webdriver.ChromeOptions()
 	prefs = {"profile.default_content_setting_values.notifications" : 2}
