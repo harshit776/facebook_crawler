@@ -81,8 +81,8 @@ def my_friends(driver):
 
 
 def login():
-	start = "sharshit03@gmail.com"
-	end = "hskingdom"
+	email = ""
+	password = ""
 
 	chrome_options = webdriver.ChromeOptions()
 	prefs = {"profile.default_content_setting_values.notifications" : 2}
@@ -91,9 +91,9 @@ def login():
 	driver.get("https://www.facebook.com/")
 	#assert "Facebook" in driver.title
 	elem = driver.find_element_by_id("email")
-	elem.send_keys(start)
+	elem.send_keys(email)
 	elem = driver.find_element_by_id("pass")	
-	elem.send_keys(end)
+	elem.send_keys(password)
 	elem.send_keys(Keys.RETURN)
 	time.sleep(5)
 	#driver.get("https://www.facebook.com/ravdeep.singh.180072?fref=pb&hc_location=friends_tab")
