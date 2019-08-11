@@ -53,13 +53,13 @@ def scroll_all(driver , scrolls = 1000):
 # ------------------------------------
 def images(driver , friends):
 	
-	print
-	print "---------------Getting images of Friends--------------------"
-	
 	# To download images of all your friends
+
 	# loc = location to store images of your friends (specify this)
 	loc=""
 	
+	print
+	print "---------------Getting images of Friends--------------------"
 	for one in friends:
 		driver.get(one)
 		time.sleep(7)
@@ -122,11 +122,11 @@ def friends_of_friends(driver , friends):
 # ---------------------------------------------
 def timeline_images(driver):
 	
-	print
-	print "---------------Downloading timeline images of friends--------------------"
-
 	# loc = place to store downloaded images (specify this)
 	loc=""
+	
+	print
+	print "---------------Downloading timeline images of user--------------------"
 	cnt = 1
 
 	scroll_all(driver,3)
@@ -157,6 +157,7 @@ def timeline_images(driver):
 					cnt += 1
 
 			old_window(driver)
+			break
 			time.sleep(7)
 
 
@@ -164,8 +165,6 @@ def timeline_images(driver):
 def my_friends(driver):
 
 	# To store links of all friends of a user
-	print
-	print "---------------Getting Friends--------------------"
 	friends = []
 
 	# To go on main page of a user
@@ -180,6 +179,10 @@ def my_friends(driver):
 	timeline_images(driver)
 
 	# Finding all friends and saving their links
+
+	print
+	print "---------------Getting Friends--------------------"
+
 	for a in friend_page:
 		link = a.get_attribute("href")
 		#print link
